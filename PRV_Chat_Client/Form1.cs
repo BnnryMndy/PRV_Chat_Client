@@ -37,6 +37,7 @@ namespace PRV_Chat_Client
         {
             sw.WriteLine(inputTextBox.Text);
             sw.Flush();
+
             inputTextBox.Text = "";
         }
 
@@ -71,6 +72,12 @@ namespace PRV_Chat_Client
             }
             listBox1.Items.Add(msg);
 
+        }
+
+        private void Form1_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            sw.WriteLine("");
+            sw.Flush();
         }
     }
 }
